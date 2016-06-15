@@ -24,7 +24,7 @@ module.exports = function (bot) {
 };
 
 
-var token = "221126677:AAE9q_krYXrYcqxP0IQflS5cDRhoOFyqXy8";
+var token = "140120393:AAFdtruEscY6D8WlnThwQ85-d3hwmcW1VyU";
 
 var Bot = require('node-telegram-bot-api');
 var bot;
