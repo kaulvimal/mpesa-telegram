@@ -3,13 +3,10 @@ var token = "221126677:AAE9q_krYXrYcqxP0IQflS5cDRhoOFyqXy8";
 var Bot = require('node-telegram-bot-api');
 var bot;
 
-if(process.env.NODE_ENV === 'production') {
-  bot = new Bot(token);
-  bot.setWebHook('https://mpesa-telegram.herokuapp.com' + bot.token);
-}
-else {
-  bot = new Bot(token, { polling: true });
-}
+bot = new Bot(token);
+bot.setWebHook('https://mpesa-telegram.herokuapp.com' + bot.token);
+
+
 
 console.log('bot server started...');
 
