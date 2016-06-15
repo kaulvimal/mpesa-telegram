@@ -1,2 +1,2 @@
-var bot = require('./bot');
-require('./web')(bot);
+require('./bot');
+require('./web');
