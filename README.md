@@ -1,24 +1,9 @@
-# mpesa-telegram-bot
+# telegram-bot-webhook
+A simple telegram bot server in node.js using webhook.
 
+see: [Configure a telegram bot webhook into an existing express app](http://mvalipour.github.io/node.js/2015/12/06/telegram-bot-webhook-existing-express/)
 
-## Installation
+# Getting Started
+To test in a local environment you need to create a `.env` file in the root directory of the project and run heroku local
 
-1. Make sure you've installed all requirements
-2. Clone this repository:
-  `git clone https://github.com/vimalkaul/mpesa-telegram`
-3. Install the project using `npm`:
-  `npm install`
-
-
-## Requirements / Dependencies
-
-* NodeJS
-* Telegram Bot API token
-
-## Version
-
-1.0.0
-
-## License
-
-[MIT](LICENSE)
+To run online you need to set a couple of config vars with `heroku config:set TOKEN=youmustputherethebottoken` and `heroku config:set HEROKU_URL=$(heroku info -s | grep web-url | cut -d= -f2)`
