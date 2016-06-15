@@ -32,6 +32,7 @@ var bot;
 if(process.env.NODE_ENV === 'production') {
   bot = new Bot(token);
   bot.setWebHook('https://mpesa-telegram.herokuapp.com' + bot.token);
+  console.log(bot);
 }
 else {
   bot = new Bot(token, { polling: true });
