@@ -9,7 +9,7 @@ var bot;
 
 if(process.env.NODE_ENV === 'production') {
   bot = new Bot(token);
-  bot.setWebHook('https://mpesa-telegram.herokuapp.com/' + bot.token);
+  bot.setWebHook('URL_TO_SERVER' + bot.token);
 }
 else {
   bot = new Bot(token, { polling: true });
@@ -19,11 +19,14 @@ console.log('bot server started...');
 
 db = require('./db');
 
+//To keep DB Connection Alive
+
 setInterval(function () {
     db.query('SELECT 1');
 }, 5000);
 
-// hello command
+//Logic
+
 bot.on('message', function (message) {
 
 if (message.text == "Hi" || message.text == "Hello" || message.text == "Sasa" || message.text == "Xaxa" || message.text == "hi" || message.text == "hello") {

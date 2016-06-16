@@ -1,7 +1,7 @@
-# telegram-bot-webhook
-A simple telegram bot server in node.js using webhook.
+# M-PESA Telegram Bot
 
-see: [Configure a telegram bot webhook into an existing express app](http://mvalipour.github.io/node.js/2015/12/06/telegram-bot-webhook-existing-express/)
+M-PESA telegram bot server in node.js using webhook.
+
 
 # Getting Started
 To test in a local environment you need to create a `.env` file in the root directory of the project and run heroku local
