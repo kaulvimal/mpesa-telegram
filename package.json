@@ -6,7 +6,8 @@
   "dependencies": {
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
-    "node-telegram-bot-api": "^0.20.1"
+    "node-telegram-bot-api": "^0.20.1",
+    "mysql": ""
   },
   "devDependencies": {},
   "scripts": {
