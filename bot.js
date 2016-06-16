@@ -2,7 +2,7 @@ if(process.env.NODE_ENV === 'production') {
 var token = process.env.TOKEN;
 }
 else{
-  var token = '140120393:AAFdtruEscY6D8WlnThwQ85-d3hwmcW1VyU';
+  var token = '';
 }
 var Bot = require('node-telegram-bot-api');
 var bot;
