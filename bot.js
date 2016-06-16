@@ -21,11 +21,27 @@ db = require('./db');
 
 // hello command
 bot.on('message', function (message) {
+
+if (message.text == "Hi" || message.text == "Hello" || message.text == "Sasa" || message.text == "Xaxa" || message.text == "hi" || message.text == "hello") {
+  console.log(message);
+  var text = 'Hi ' + message.chat.first_name + '. Enter the amount you want to send to your friend'
+  bot.sendMessage(message.chat.id, text);
+  var post = {from: message.chat.first_name,to:message.chat.id,msg:message.text};
+  var query = db.query('INSERT INTO messages SET ?', post, function(err, result) {
+      if (err) throw err;
+      });
+}
+else {
+
   var mpesa_amount = message.text;
   var query = db.query('SELECT other_mpesa, unregistered_mpesa, withdraw FROM query WHERE '+mpesa_amount+' BETWEEN `from_amount` AND `to_amount`;', function(err, rows) {
     if (err){
       console.log('Error while performing Query.');
       bot.sendMessage(message.chat.id, 'Invalid Amount');
+      var post = {from: message.chat.first_name,to:message.chat.id,msg:message.text};
+      var query = db.query('INSERT INTO messages SET ?', post, function(err, result) {
+          if (err) throw err;
+          });
     }
 
     else {
@@ -58,7 +74,8 @@ bot.on('message', function (message) {
         }
   
   });
-  //bot.sendMessage(message.chat.id, query);
+}
 });
+
 
 module.exports = bot;
