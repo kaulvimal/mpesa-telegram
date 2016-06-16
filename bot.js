@@ -22,7 +22,7 @@ bot.on('message', function (message) {
 
  if (message.text == "Hi" || message.text == "Hello" || message.text == "Sasa" || message.text == "Xaxa") {
   console.log(message);
-  var text = 'hello'
+  var text = 'Hi ' + message.chat.first_name + '. Enter the amount you want to send to your friend'
   bot.sendMessage(message.chat.id, text);
 }
 
