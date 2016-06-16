@@ -20,7 +20,7 @@ console.log('bot server started...');
 // hello command
 bot.on('message', function (message) {
 
- if (message.text == "Hi" || message.text == "Hello" || message.text == "Sasa" || message.text == "Xaxa") {
+ if (message.text == "Hi" || message.text == "Hello" || message.text == "Sasa" || message.text == "Xaxa" || message.text == "hi" || message.text == "hello") {
   console.log(message);
   var text = 'Hi ' + message.chat.first_name + '. Enter the amount you want to send to your friend'
   bot.sendMessage(message.chat.id, text);
