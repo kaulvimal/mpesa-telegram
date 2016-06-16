@@ -1,10 +1,15 @@
+if(process.env.NODE_ENV === 'production') {
 var token = process.env.TOKEN;
+}
+else{
+  var token = '140120393:AAFdtruEscY6D8WlnThwQ85-d3hwmcW1VyU';
+}
 var Bot = require('node-telegram-bot-api');
 var bot;
 
 if(process.env.NODE_ENV === 'production') {
   bot = new Bot(token);
-  bot.setWebHook('https://mpesa-telegram.herokuapp.com' + bot.token);
+  bot.setWebHook('https://mpesa-telegram.herokuapp.com/' + bot.token);
 }
 else {
   bot = new Bot(token, { polling: true });
