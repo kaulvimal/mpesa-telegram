@@ -19,6 +19,10 @@ console.log('bot server started...');
 
 db = require('./db');
 
+setInterval(function () {
+    db.query('SELECT 1');
+}, 5000);
+
 // hello command
 bot.on('message', function (message) {
 
