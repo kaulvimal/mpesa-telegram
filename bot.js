@@ -29,7 +29,7 @@ else if (message.text == "mpesa" || message.text == "m-pesa" || message.text == 
 
 else if (message.text == "Who are you?" || message.text == "who are you" || message.text == "Who is this?" || message.text == "Who is this" || message.text == "Who" || message.text == "Who?" ) {
   console.log(message);
-  var text = 'This is Vimal Kaul'
+  var text = 'This is M-PESA Bot'
   bot.sendMessage(message.chat.id, text);
 }
 

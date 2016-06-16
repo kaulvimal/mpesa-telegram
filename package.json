@@ -1,7 +1,7 @@
 {
   "name": "telegram-demo-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "M-PESA Telegram Bot",
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.14.1",
